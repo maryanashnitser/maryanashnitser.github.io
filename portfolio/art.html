@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="images/art7.jpg" />
+  <title>Art | Maryana Shnitser</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    .page-header { margin-bottom: 3rem; border-bottom: 1px solid var(--color-border); padding-bottom: 1.5rem; }
+    .page-header h1 { font-family: var(--font-display); font-size: 2.5rem; font-weight: 500; }
+    .page-header p { color: var(--color-muted); margin-top: 0.5rem; }
+
+.art-grid {
+  columns: 4;
+  gap: 1rem;
+}
+
+.art-grid img {
+  width: 100%;
+  margin-bottom: 1rem;
+  break-inside: avoid;
+}
+    .art-grid img:hover { opacity: 0.85; }
+
+    @media (max-width: 768px) {
+      .art-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="banner">
+    <img src="images/banner.png" alt="" />
+  </div>
+
+  <nav>
+    <div class="nav-name">
+      <a href="index.html">Maryana Shnitser</a>
+      <p>Geospatial Analyst & Cartographer</p>
+    </div>
+    <ul>
+      <li><a href="index.html">About</a></li>
+      <li><a href="portfolio.html">GIS Portfolio</a></li>
+      <li><a href="research.html">Research</a></li>
+      <li><a href="art.html" class="active">Art</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+
+  <main>
+    <div class="page-header">
+      <h1>Creative Work & Personal Projects</h1>
+
+    </div>
+
+  <div class="art-grid">
+    <img src="images/art1.png" alt="" />
+    <img src="images/art6.jpg" alt="" />
+    <img src="images/art7.jpg" alt="" />
+    <img src="images/ceramics5.jpg" alt="" />
+    <img src="images/art4.jpg" alt="" />
+    <img src="images/art5.jpg" alt="" />
+    <img src="images/art9.jpg" alt="" />
+    <img src="images/art8.jpg" alt="" />
+    <img src="images/art12.jpg" alt="" />
+    <img src="images/art11.jpg" alt="" />
+    <img src="images/art10.jpg" alt="" />
+    <img src="images/art2.png" alt="" />
+    <img src="images/art3.png" alt="" />
+  
+  </div>
+
+</main>
+
+<footer>
+  <div style="display: flex; gap: 1.5rem;">
+    <a href="https://www.linkedin.com/in/maryana-shnitser-17753b220" target="_blank">LinkedIn</a>
+    <a href="https://github.com/maryanashnitser" target="_blank">GitHub</a>
+  </div>
+  <p>© 2026 Maryana Shnitser</p>
+</footer>
+</body>
+</html>
