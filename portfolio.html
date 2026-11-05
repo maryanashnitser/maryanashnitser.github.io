@@ -3,14 +3,14 @@
 <head>
 
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-DCJ69PJG3Q"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-DCJ69PJG3Q"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-  gtag('config', 'G-DCJ69PJG3Q');
-</script>
+    gtag('config', 'G-DCJ69PJG3Q');
+  </script>
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -19,12 +19,11 @@
   <link rel="icon" href="images/art7.jpg" />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
   <style>
-  
+
     .page-header { margin-bottom: 3rem; border-bottom: 1px solid var(--color-border); padding-bottom: 1.5rem; }
     .page-header h1 { font-family: var(--font-display); font-size: 2.5rem; font-weight: 500; }
     .page-header p { color: var(--color-muted); margin-top: 0.5rem; }
-    
-  
+
     .section-label {
       font-size: 1.15rem;
       text-transform: uppercase;
@@ -60,6 +59,66 @@
     @media (max-width: 768px) {
       .projects { columns: 2; }
     }
+
+    /* ---------- Slider ---------- */
+    .slider {
+      position: relative;
+    }
+
+    .projects--slider {
+      columns: auto;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+      scrollbar-width: none;
+    }
+
+    .projects--slider::-webkit-scrollbar {
+      display: none;
+    }
+
+    .projects--slider .project-card {
+      flex: 0 0 auto;
+      margin-bottom: 0;
+      scroll-snap-align: start;
+    }
+
+    .projects--slider .project-card img {
+      height: 320px;
+      width: auto;
+      max-width: none;
+      display: block;
+    }
+
+    .slider-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 2;
+      width: 2.5rem;
+      height: 2.5rem;
+      border: 1px solid var(--color-border);
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.9);
+      cursor: pointer;
+      font-size: 1.25rem;
+      line-height: 1;
+    }
+
+    .slider-btn:hover {
+      background: #fff;
+    }
+
+    .slider-btn--prev { left: 0.5rem; }
+    .slider-btn--next { right: 0.5rem; }
+
+    @media (max-width: 768px) {
+      .projects--slider .project-card img { height: 220px; }
+    }
+
   </style>
 </head>
 <body>
@@ -87,6 +146,23 @@
       <h1>GIS & Cartography</h1>
     </div>
 
+    <p class="section-label">30 Day Map Challenge Highlights</p>
+
+    <div class="projects">
+      <div class="project-card">
+        <img src="images/day3.jpg" alt="" />
+      </div>
+      <div class="project-card">
+        <img src="images/day4.jpg" alt="" />
+      </div>
+      <div class="project-card">
+        <img src="images/day5.jpg" alt="" />
+      </div>
+      <div class="project-card">
+        <img src="images/day7.jpg" alt="" />
+      </div>
+    </div>
+
     <p class="section-label">Spatial Analysis</p>
 
     <div class="projects">
@@ -96,22 +172,19 @@
       <div class="project-card">
         <img src="images/pop.jpg" alt="" />
       </div>
-      <!-- Add more analysis project cards here -->
       <div class="project-card">
         <img src="images/pop2.jpg" alt="" />
-      </div>   
+      </div>
       <div class="project-card">
         <img src="images/gis9.jpg" alt="" />
-      </div>  
+      </div>
       <div class="project-card">
         <img src="images/gis5.jpg" alt="" />
       </div>
       <div class="project-card">
         <img src="images/gis10.jpg" alt="" />
       </div>
-      </div>
     </div>
-
 
     <p class="section-label">Cartography & Design</p>
 
@@ -128,21 +201,71 @@
       <div class="project-card">
         <img src="images/gis3.jpg" alt="" />
       </div>
-      <!-- <div class="project-card">
-        <img src="images/gis8.jpg" alt="" />
-      </div> -->
+    </div>
 
+    
+    <p class="section-label">30 Day Map Challenge - November 2026 (In Progress)</p>
+
+    <div class="slider">
+      <button class="slider-btn slider-btn--prev" aria-label="Previous">&#8249;</button>
+
+      <div class="projects projects--slider">
+        <div class="project-card">
+          <img src="images/day1.jpg" alt="Day 1" />
+        </div>
+        <div class="project-card">
+          <img src="images/day2.jpg" alt="Day 2" />
+        </div>
+        <div class="project-card">
+          <img src="images/day3.jpg" alt="Day 3" />
+        </div>
+        <div class="project-card">
+          <img src="images/day4.jpg" alt="Day 4" />
+        </div>
+        <div class="project-card">
+          <img src="images/day5.jpg" alt="Day 5" />
+        </div>
+        <div class="project-card">
+          <img src="images/day6.jpg" alt="Day 6" />
+        </div>
+        <div class="project-card">
+          <img src="images/day7.jpg" alt="Day 7" />
+        </div>
+      </div>
+
+      <button class="slider-btn slider-btn--next" aria-label="Next">&#8250;</button>
     </div>
 
   </main>
 
-<footer>
-  <div style="display: flex; gap: 1.5rem;">
-    <a href="https://www.linkedin.com/in/maryana-shnitser-17753b220" target="_blank">LinkedIn</a>
-    <a href="https://github.com/maryanashnitser" target="_blank">GitHub</a>
-  </div>
-  <p>© 2026 Maryana Shnitser</p>
-</footer>
+  <footer>
+    <div style="display: flex; gap: 1.5rem;">
+      <a href="https://www.linkedin.com/in/maryana-shnitser-17753b220" target="_blank">LinkedIn</a>
+      <a href="https://github.com/maryanashnitser" target="_blank">GitHub</a>
+    </div>
+    <p>© 2026 Maryana Shnitser</p>
+  </footer>
+
+  <!-- slider-->
+  <script>
+    document.querySelectorAll('.slider').forEach(function (slider) {
+      var track = slider.querySelector('.projects--slider');
+      var prev = slider.querySelector('.slider-btn--prev');
+      var next = slider.querySelector('.slider-btn--next');
+
+      function step() {
+        return track.clientWidth * 0.8;
+      }
+
+      prev.addEventListener('click', function () {
+        track.scrollBy({ left: -step(), behavior: 'smooth' });
+      });
+
+      next.addEventListener('click', function () {
+        track.scrollBy({ left: step(), behavior: 'smooth' });
+      });
+    });
+  </script>
 
 </body>
 </html>
